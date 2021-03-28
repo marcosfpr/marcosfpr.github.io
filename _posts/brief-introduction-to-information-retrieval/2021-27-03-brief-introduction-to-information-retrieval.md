@@ -24,8 +24,9 @@ Let's take a look at basic information retrieval through an example, which will 
 
 Consider a very simple information retrieval scenario. In this sample, we have a small collection of 10 textual documents related to the soccer World Cup. Let's take a look at these corpus: 
 
-| doc1.txt  | In 1994, Brazil was crowned champion, but the competition's top scorer was the Bulgarian Hristo Stoichkov, with 6 goals                               |
+| Document  | Body                                                                                                                                                  |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| doc1.txt  | In 1994, Brazil was crowned champion, but the competition's top scorer was the Bulgarian Hristo Stoichkov, with 6 goals                               |
 | doc2.txt  | The first Brazilian goal in World Cup's history was scored by Preguinho, Fluminense striker, in 1930, against Uruguay.                                |
 | doc3.txt  | The brazilian goals in the 1994 World Cup was scored by Romário, Raí, Márcio Santos, Bebeto, and Branco;                                              |
 | doc4.txt  | The World Cup emerged with the intention of expanding the so-called British Cup, instituted by the Football Association in 1872.                      |
