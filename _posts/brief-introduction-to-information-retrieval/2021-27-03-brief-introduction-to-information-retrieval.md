@@ -22,7 +22,7 @@ While we learn a little bit about retrieval, we'll take a look at a basic inform
 
 ## Corpus
 
-For more than 5000 years, humanity has been organizing information for future research and recovery. In its most usual sense, this was done through textual items (documents), which, in turn, were grouped throughout history in large corpus (from classical libraries to enormous web pages index).
+Since a long time ago, humanity has been organizing information for future search and recovery. In its most usual sense, this was done through textual items (documents), which, in turn, were grouped throughout history in large corpus (from classical libraries to enormous web pages index).
 
 In our example, we'll consider a very simple information retrieval scenario. For that, we need to, first of all, define our corpus, in which we are intersted to extract insights. In this sample, we have a small collection of 10 textual documents related to the soccer World Cup. Let's take a look at these corpus: 
 
