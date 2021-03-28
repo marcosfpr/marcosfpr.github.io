@@ -20,4 +20,20 @@ There is a lot of challenges in this area. In web search, for example, the syste
 
 Let's take a look at basic information retrieval through an example, which will allow us to understand the central ideas behind this type of system. It's not trivial, but it's cool :-)
 
-## Example
+## Simple Scenario
+
+Consider a very simple information retrieval scenario. In this sample, we have a small collection of 10 textual documents related to the soccer World Cup. Let's take a look at these corpus: 
+
+| doc1.txt  | In 1994, Brazil was crowned champion, but the competition's top scorer was the Bulgarian Hristo Stoichkov, with 6 goals                               |
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| doc2.txt  | The first Brazilian goal in World Cup's history was scored by Preguinho, Fluminense striker, in 1930, against Uruguay.                                |
+| doc3.txt  | The brazilian goals in the 1994 World Cup was scored by Romário, Raí, Márcio Santos, Bebeto, and Branco;                                              |
+| doc4.txt  | The World Cup emerged with the intention of expanding the so-called British Cup, instituted by the Football Association in 1872.                      |
+| doc5.txt  | Mexican goalkeeper Antonio Carbajal was the player who participated in the largest number of Cups (1950, 1954, 1958, 1962 and 1966).                  |
+| doc6.txt  | Leônidas da Silva and Ademir de Menezes were the only Brazilians who managed to become the top scorer in a World Cup.                                 |
+| doc7.txt  | The German team was the champion of the 1990 Cup, when they beat Argentina in the final, with a Brehme goal, in the 40th minute of the 2nd half.      |
+| doc8.txt  | The number of countries participating in the World Cup, went from 13 (in 1930) to 24 (in 1994).                                                       |
+| doc9.txt  | With Passarela, Kempes and Fillol, Argentina beat Holland 3-1 in the 1978 World Cup final.                                                            |
+| doc10.txt | In the 1974 World Cup final, the Dutch Carousel, as the Netherlands team was known, was annulled by host Germany West, who won 2-1 and won the title. |
+
+
