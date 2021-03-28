@@ -16,7 +16,7 @@ is a form of information retrieval. However, as an academic field of study, info
 
 As defined in this way, information retrieval used to be an activity that only a few people engaged in: reference librarians, and similar professional searchers. Now the world has changed, and hundreds of millions of people engage in information retrieval every day when they use a **web search engine** or search their email.
 
-There is a lot of challanges in this area. In web search, for example, the system has to provide search over billions of documents stored on millions of computers.  Distinctive issues are needing to gather documents for indexing, being able to build systems that work efficiently at this enormous scale.
+There is a lot of challenges in this area. In web search, for example, the system has to provide search over billions of documents stored on millions of computers.  Distinctive issues are needing to gather documents for indexing, being able to build systems that work efficiently at this enormous scale.
 
 Let's take a look at basic information retrieval through an example, which will allow us to understand the central ideas behind this type of system. It's not trivial, but it's cool :-)
 
