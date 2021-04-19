@@ -91,7 +91,15 @@ vocabulary.import_collection()
 
 ## Search
 
+We already known sufficient about what is a corpus, queries and indexes. Now, we'll see the search process: how to effectively assign relevance scores to each document based on a query. The algorithm who performs these relevance calculus is an IR model. That are many categories of IR models based on the corpus structure, and, for each category, exists many different models (see Figure 1).
 
+It's important to mention that did not exists a "holy grail" model that can be used in every scenario with the best accuracy. The usability, parameterization and complexity of models needs to be taken into account when choosing one IR model. Here, we'll deep dive into a subset of non-structured text IR models called classic models. These models were the basis for most of the existing models.
+
+### Boolean Model
+
+### Vector Space Model
+
+### Probabilistic Model
 
 ## Conclusion
 
