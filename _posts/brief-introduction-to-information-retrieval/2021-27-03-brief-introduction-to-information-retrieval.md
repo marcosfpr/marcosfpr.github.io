@@ -1,5 +1,5 @@
 ---
-title: Brief Introduction to Information Retrieval
+title: Classic information retrieval and MatchUp.
 date: 2021-03-27 18:00:00 +07:00
 tags: [information retrieval, search engines]
 description: Classic information retrieval and MatchUp.
