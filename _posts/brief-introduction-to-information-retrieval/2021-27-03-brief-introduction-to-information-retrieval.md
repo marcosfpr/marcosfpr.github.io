@@ -18,13 +18,13 @@ As defined in this way, information retrieval used to be an activity that only a
 
 There is a lot of challenges in this area. In web search, for example, the system has to provide search over billions of documents stored on millions of computers.  Distinctive issues are needing to gather documents for indexing, being able to build systems that work efficiently at this enormous scale.
 
-While we learn a little bit about retrieval, we'll take a look at a basic information retrieval example through a experimental library that I made, called [MatchUp](http://matchup.ufop.br). These tool will allow us to understand the central ideas behind this type of system. It's not trivial, but it's really important those days.
+While we learn a little bit about retrieval, we'll take a look at a basic information retrieval example through a experimental library that I made, called [MatchUp](http://matchup.ufop.br). These tool will allow us to understand the central ideas behind this type of system. 
 
 ## Corpus
 
-Since a long time ago, humanity has been organizing information for future search and retrieval. In its most usual sense, this was done through textual items (documents), which, in turn, were grouped throughout history in large corpus (from classical libraries to enormous web pages index).
+Since a long time ago, humanity has been organizing information for future search and retrieval. In its most usual sense, this was done through textual items, called documents, which, in turn, were grouped throughout history in large collections (from classical libraries to enormous web pages index). These collections are called corpus. 
 
-In our example, we'll consider a very simple information retrieval scenario. For that, we need to, first of all, define our corpus, in which we are intersted to extract insights. In this sample, we have a small collection of 10 textual documents related to the soccer World Cup. Let's take a look at these corpus: 
+In our example, we'll consider a very simple information retrieval scenario. For that, we need to, first of all, define our corpus, in which we are intersted to perform queries. In this sample, we have a small collection of 10 textual documents related to the soccer World Cup. Let's take a look at these corpus: 
 
 | Document  | Body                                                                                                                                                  |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -59,11 +59,11 @@ So far we have looked at the basic design of a search system from a high level p
 
 ## Indexing
 
-In general, information retrieval systems store their collection of documents on disk, in one central repository. The documents in this repository needs to be indexed in order to improve retrieval and ranking tasks. An index is an widely used idea for fast retrieval, corresponding to a collection of words (vocabulary) linked with pointers to related information, such as frequency os occurrences. One of the main data structures responsible for implement an index is the [Inverted File](https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-39940-9_1136). I strongly recommend reading about how to build and maintain such indexes, especially for large-scale systems. Bellow, I'll put some references to guide you to study about it.
+In general, information retrieval systems store their collection of documents on disk, in one central repository. The documents in this repository needs to be indexed in order to improve retrieval and ranking tasks. An index is an widely used idea for fast retrieval, corresponding to a collection of words (vocabulary) linked with pointers to related information, such as frequency os occurrences. One of the main data structures responsible for implement an index is the [Inverted File](https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-39940-9_1136). I strongly recommend to read about how to build and maintain such indexes, especially for large-scale systems. In the References section I'll put some references to guide you to study about.
 
 In this article, I'll not deep into details about how to construct inverted indexes. Instead, we will use the [MatchUp Library](https://match-up-lib.readthedocs.io/en/latest/) to build the index for our toy example. 
 
-To index the corpus, we need just a few lines of python code:
+To index the corpus, we just need a few lines of python code:
 
 ```python
 from matchup.structure.vocabulary import Vocabulary
@@ -75,7 +75,7 @@ vocabulary.index_files()
 
 Well, sounds simple! Behind the scenes, MatchUp perform some [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing) operations, like tokenization, stemming and filtering stopwords.
 
-In large collections, the size of the index probably will not fit in memory. Thus, there are many single machine alternatives to building large indexes, such as [BSBI](https://nlp.stanford.edu/IR-book/html/htmledition/blocked-sort-based-indexing-1.html) and [SPMI](https://nlp.stanford.edu/IR-book/html/htmledition/single-pass-in-memory-indexing-1.html). In real scenarios, these indexes are builded in a distributed system, using [sharding-based](https://solr.apache.org/guide/6_6/distributed-search-with-index-sharding.html) techniques, and are also compressed in the end. In MatchUp tool, as it is only for experimental purposes, the index is made entirely in memory.
+In large collections, the size of the index probably will not fit in memory. Thus, there are many single machine alternatives to building large indexes, such as [BSBI](https://nlp.stanford.edu/IR-book/html/htmledition/blocked-sort-based-indexing-1.html) and [SPMI](https://nlp.stanford.edu/IR-book/html/htmledition/single-pass-in-memory-indexing-1.html). In real scenarios, these indexes are builded in a distributed system, using [sharding-based](https://solr.apache.org/guide/6_6/distributed-search-with-index-sharding.html) techniques, and also compressing algorithms. In MatchUp tool, as it is only for experimental purposes, the index is made entirely in memory.
 
 So far, our small index has not been persisted on the disk. To save it, just type:
 
@@ -91,9 +91,9 @@ vocabulary.import_collection()
 
 ## Search
 
-We already known sufficient about what is a corpus, queries and indexes. Now, we'll see the search process: how to effectively assign relevance scores to each document based on a query. The algorithm who performs these relevance calculus is an IR model. That are many categories of IR models based on the corpus structure, and, for each category, exists many different models (see Figure 1).
+We already known sufficient about what is a corpus, queries and indexes. We also known how to use MatchUp tool to index our toy corpus. Now, we'll see about the search process: how to effectively assign relevance scores to each document based on a query. The algorithm who performs these relevance calculus is an IR model. That are many categories of IR models based on the corpus structure, and, for each category, exists many different models (see Figure 1).
 
-It's important to mention that did not exists a "holy grail" model that can be used in every scenario with the best accuracy. The usability, parameterization and complexity of models needs to be taken into account when choosing one IR model. Here, we'll deep dive into a subset of non-structured text IR models called classic models. These models were the basis for most of the existing models.
+It's important to mention that did not exists a "holy grail" model that can be used in every scenario with the best accuracy. The usability, parameterization and complexity of models needs to be taken into account when choosing one IR model. Here, we'll deep dive into a subset of non-structured text IR models called classic. These models were the basis for most of the existing information retrieval models.
 
 ### Boolean Model
 
