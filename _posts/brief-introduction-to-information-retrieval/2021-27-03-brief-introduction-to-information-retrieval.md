@@ -18,7 +18,7 @@ As defined in this way, information retrieval used to be an activity that only a
 
 There is a lot of challenges in this area. In web search, for example, the system has to provide search over billions of documents stored on millions of computers.  Distinctive issues are needing to gather documents for indexing, being able to build systems that work efficiently at this enormous scale.
 
-While we learn a little bit about retrieval, we'll take a look at a basic information retrieval example through a experimental library that I made, called [MatchUp](http://matchup.ufop.br), which will allow us to understand the central ideas behind this type of system. It's not trivial, but it's really important those days.
+While we learn a little bit about retrieval, we'll take a look at a basic information retrieval example through a experimental library that I made, called [MatchUp](http://matchup.ufop.br). These tool will allow us to understand the central ideas behind this type of system. It's not trivial, but it's really important those days.
 
 ## Corpus
 
