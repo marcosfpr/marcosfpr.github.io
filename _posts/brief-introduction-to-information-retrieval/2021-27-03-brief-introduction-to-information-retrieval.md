@@ -3,6 +3,7 @@ title: Classic information retrieval and MatchUp.
 date: 2021-03-27 18:00:00 +07:00
 tags: [information retrieval, search engines]
 description: Classic information retrieval and MatchUp.
+useMath: true
 ---
 
 ## Overview
@@ -107,7 +108,7 @@ It's important to mention that did not exists a "holy grail" model that can be u
 
 The classic Boolean Model (BM) is based on set theory and Boolean algebra. Thus, documents  are  represented as a set of terms, while queries are represented as a boolean expression on terms, using AND, OR and NOT operators. Moreover, BM uses the idea of exact matching between query and documents; there are no partial satisfaction in this model, and the generated response by BM is always binary: the document is (1) or is not (0) relevant. Therefore, the similarity calculation between a document dj ∈ D and a query q ∈ Q can be formulated, in a general way, as shown:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;sim({d_{j}, q}) = \begin{cases} 1 & \text{if $\exists{c(q)}$ $|$ $c(q) = c(d_{j})$}\\ 0 & \text{otherwise} \end{cases}" title="sim({d_{j}, q}) = \begin{cases} 1 & \text{if $\exists{c(q)}$ $|$ $c(q) = c(d_{j})$}\\ 0 & \text{otherwise} \end{cases}"/>
+<img src="https://latex.codecogs.com/gif.latex?\dpi{100}&space;\large&space;{\color{Gray}&space;sim({d_{j},&space;q})&space;=&space;\begin{cases}&space;1&space;&&space;\text{if&space;$\exists{c(q)}$&space;$|$&space;$c(q)&space;=&space;c(d_{j})$}\\&space;0&space;&&space;\text{otherwise}&space;\end{cases}}" title="\large {\color{Gray} sim({d_{j}, q}) = \begin{cases} 1 & \text{if $\exists{c(q)}$ $|$ $c(q) = c(d_{j})$}\\ 0 & \text{otherwise} \end{cases}}" />
 
 where c(q) corresponds to any conjunctive component from query q and c(dj) corresponds to the conjunctive component from document dj.
 
