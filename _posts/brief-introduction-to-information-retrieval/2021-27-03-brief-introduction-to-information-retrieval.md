@@ -168,9 +168,9 @@ Really dense theorethic content, right? No worry, all these calculus will make s
 
 Yeah! All the models works well! It's really satisfying see that all these theoretic stuff produces algorithms that can be effective. Obviously, these models have limitations, but they are already a great starting point in this area. Analyzing the results, we can superficially note that:
 
-- For BM, it is possible to perceive that, in general, this model suffers from one major drawback: the binary term weighting. Therefore, the BM model was the most ineffective among the classics, and, its use is based in specific scenarios which boolean expression are can suitable;
+* For BM, it is possible to perceive that, in general, this model suffers from one major drawback: the binary term weighting. Therefore, the BM model was the most ineffective among the classics, and, its use is based in specific scenarios which boolean expression are can suitable;
 
-- For VSM and PM, which presented very similar results, is noted that these models performed satisfactorily considering all three queries.
+* For VSM and PM, which presented very similar results, is noted that these models performed satisfactorily considering all three queries.
 
 That is a really specific and simple scenario, so we cannot infer too much things about the models accuracy. For that specific case, I recommend to choose the VSM model. In real scenarios, we evaluate these models in large benchmark collections using a bunch of specific metrics (precision, recall, f1, map, ndcg, and so on) that can help the team to build the most effective search engine.
 
