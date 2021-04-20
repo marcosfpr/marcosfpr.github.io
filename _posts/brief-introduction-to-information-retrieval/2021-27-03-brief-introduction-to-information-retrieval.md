@@ -130,12 +130,60 @@ In MatchUp tool, we perform a simple improvement on BM to provide partial matchi
 
 ### Vector Space Model
 
+The Vector Space Model (VSM) propose an algebraic solution that can perform partial matches. In VSM, the indexing terms are mutually independent and are represented as vectors in a t-dimensional space, where t is the number of indexing term. Thereby, the vision of documents and queries in VSM is t-dimensional vectors, built through a weighting scheme called [TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf), which aims to assign weights to indexing terms. Therefore, the similarity degree between a document and a query is calculated as vectors dj and q correlation, that is, the cosine between its angles, as shown bellow:
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;{\color{Gray} \emph{sim}(d_{j}, q) = \frac{\overrightarrow{d_{j}} \bullet \overrightarrow{q}}{|{\overrightarrow{d_{j}}}| \times |{\overrightarrow{q}}|} = \frac{\sum_{i=1}^{t} w_{i,j} \times w_{i,q}}{\sqrt{\sum_{i=1}^{t} w^2_{i,j}} \times \sqrt{\sum_{i=1}^{t} w^2_{i,q}}}  }" title="{\color{Gray} \emph{sim}(d_{j}, q) = \frac{\overrightarrow{d_{j}} \bullet \overrightarrow{q}}{|{\overrightarrow{d_{j}}}| \times |{\overrightarrow{q}}|} = \frac{\sum_{i=1}^{t} w_{i,j} \times w_{i,q}}{\sqrt{\sum_{i=1}^{t} w^2_{i,j}} \times \sqrt{\sum_{i=1}^{t} w^2_{i,q}}}  }" />
+
+where wij is the weight of the term ki in relation to the document dj and wiq is the weight of the term ki in relatio to the query q.
+
+In MatchUp tool we need to specify TF-IDF strategies in the VSM algorithm:
+
+```python
+response = query.search(model=Vector(), tf=TermFrequency(), idf=InverseFrequency())
+```
+
 ### Probabilistic Model
+
+Finally, the classic Probabilistic Model (PM) it was the last classic model, proposed by Robertson and Spark Jones. The PM main idea consists of, given a user query q and document dj, estimate the probability of the user considering dj relevant; this is the probability of dj ⊂ R,  where R is the set of relevant  documents to a query.  Thus,  the  similarity  function sim(dj, q) in PM is calculated as:
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;{\color{Gray}  \emph{sim}(d_{j}, q) = \frac{P(R|\overrightarrow{d_{j}}, q)}{P(\overline{R}|\overrightarrow{d_{j}}, q)}  }" title="{\color{Gray}  \emph{sim}(d_{j}, q) = \frac{P(R|\overrightarrow{d_{j}}, q)}{P(\overline{R}|\overrightarrow{d_{j}}, q)}   }" />
+
+where dj is a vector representation of document built through binary weights, that indicates the absence or presence of indexing terms. Note that the main hypothesis of PM is blurred due to a significant lack of information and properties about the ideal set R. To solve that, Croft and Harper propose a simple method that generates a classification function without any previous relevance information about R.
+
+In MatchUp tool, the usability of PM is similar to that of the boolean model:
+
+```python
+response = query.search(model=Probabilistic())
+```
+
+### Evaluating Results
+
+Really dense theorethic content, right? No worry, all these calculus will make sense in your head with time. For now, we'll evaluate the models executing the queries that I have been proposed earlier in this article. No IR metric will be used today, that's a talk for further articles. Here, we'll just print the results and take conclusions about.
+
+|                                                                             | Boolean Model                                                                              | Probabilistic Model                                                                    | Vector Space Model                                                                                   |
+|-----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+|      Which team is the 1994 World Cup champion?                             | d8: 0.75 <br> d3: 0.75 <br> d10: 0.5 <br> d7: 0.5 <br> d2: 0.5 <br> d6: 0.5 <br> d1: 0.5 <br> d4: 0.5 <br> d9: 0.5 <br> d5: 0.25        | d1: 1.422 <br> d7: 1.342 <br> d3: 0.08 <br> d8: 0.08 <br> d10: 0.0 <br> d2: 0.0 <br> d4: 0.0 <br> d5: 0.0 <br> d6: 0.0 <br> d9: 0.0 | d1: 0.983 <br> d7: 0.789 <br> d3: 0.616 <br> d8: 0.616 <br> d10: 0.182 <br> d2: 0.182 <br> d6: 0.182 <br> d9: 0.182 <br> d4: 0.176 <br> d5: 0.052 |
+| Which soccer player has the highest number of participations in World Cups? | d5: 0.571 <br> d8: 0.571 <br> d9: 0.286 <br> d6: 0.286 <br> d10: 0.286 <br> d4: 0.286 <br> d3: 0.286 <br> d2: 0.286 <br> d7: 0.143 | d5: 3.678 <br> d8: 2.685 <br> d10: 0.0 <br> d2: 0.0 <br> d3: 0.0 <br> d4: 0.0 <br> d6: 0.0 <br> d7: 0.0 <br> d9: 0.0           | d5: 0.994 <br> d8: 0.708 <br> d10: 0.114 <br> d2: 0.114 <br> d3: 0.114 <br> d6: 0.114 <br> d9: 0.114 <br> d4: 0.111 <br> d7: 0.032           |
+| I want to know about World Cup finals.                                      | d10: 1.0 <br> d9: 1.0 <br> d7: 0.667 <br> d8: 0.667 <br> d4: 0.667 <br> d2: 0.667 <br> d6: 0.667 <br> d3: 0.667 <br> d5: 0.333     | d10: 0.932 <br> d7: 0.932 <br> d9: 0.932 <br> d2: 0.0 <br> d3: 0.0 <br> d4: 0.0 <br> d5: 0.0 <br> d6: 0.0 <br> d8: 0.0         | d10: 1.0 <br> d9: 1.0 <br> d7: 0.959 <br> d2: 0.295 <br> d3: 0.295 <br> d6: 0.295 <br> d8: 0.295 <br> d4: 0.286 <br> d5: 0.084               |
+
+Yeah! All the models works well! It's really satisfying see that all these theoretic stuff produces algorithms that can be effective. Obviously, these models have limitations, but they are already a great starting point in this area. Analyzing the results, we can superficially note that:
+
+- For BM, it is possible to perceive that, in general, this model suffers from one major drawback: the binary term weighting. Therefore, the BM model was the most ineffective among the classics, and, its use is based in specific scenarios which boolean expression are can suitable;
+
+- For VSM and PM, which presented very similar results, is noted that these models performed satisfactorily considering all three queries.
+
+That is a really specific and simple scenario, so we cannot infer too much things about the models accuracy. For that specific case, I recommend to choose the VSM model. In real scenarios, we evaluate these models in large benchmark collections using a bunch of specific metrics (precision, recall, f1, map, ndcg, and so on) that can help the team to build the most effective search engine.
 
 ## Conclusion
 
+Now we already know sufficient about basic information retrieval concepts and classic algorithms. Despite we saw to much stuff, remember that this is just the tip of the information retrieval iceberg. For future research, I strongly recommend you guys to see about extended models, semi-structured text retrieval and scalable implementations.
+
+Also, don't forget to give a star in the [MatchUp official repository](https://github.com/matchup-ir/match_up_lib). There is just a experimental tool, but can be very useful to see how these things works. I really hope that the MatchUp tool can help you, or that you can help the tool :-).
+
+Thanks!
 
 ## References
 
 - [Stanford Inverted Indexes Tutorial](https://nlp.stanford.edu/IR-book/html/htmledition/a-first-take-at-building-an-inverted-index-1.html)
 - [Inverted Indexes on ElasticSeach](https://codingexplained.com/coding/elasticsearch/understanding-the-inverted-index-in-elasticsearch)
+- [Modern Information Retrieval](https://www.amazon.com.br/Modern-Information-Retrieval-Ricardo-Baeza-Yates/dp/020139829X)
