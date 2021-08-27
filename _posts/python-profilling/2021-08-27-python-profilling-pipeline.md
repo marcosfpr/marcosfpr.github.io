@@ -1,6 +1,6 @@
 ---
 title: Simple way to profilling python code.
-date: 2021-03-27 18:00:00 +07:00
+date: 2021-08-28 18:00:00 +07:00
 tags: [python, programming]
 description: Classic approaches to profile your python code.
 useMath: true
