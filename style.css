@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "vt323";
+  src: url("https://fonts.gstatic.com/s/vt323/v11/pxikyp0ihief2z9af5emjq.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "vt323", monospace;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+nav {
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+
+nav button {
+  font-family: inherit;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.cv-content {
+  text-align: left;
+  margin: 40px auto;
+  padding: 20px;
+  width: 70%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.cv-section {
+  margin-bottom: 20px;
+}
+
+.cv-section h3 {
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+.welcome {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
+  width: 70%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.post-list {
+  text-align: center;
+  margin: 40px auto;
+  width: 70%;
+}
+
+.post-link {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.post {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
+  width: 70%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.post-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  color: #888;
+  font-size: 0.8em;
+}
