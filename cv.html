@@ -26,8 +26,10 @@
 
     <div class="cv-section">
       <h3>About Me</h3>
-      <p>Rust software engineer at Vaultree. I like everything related to data security, databases and distributed
-        systems.</p>
+      <p>Rust software engineer @ Vaultree and M.Sc candidate @ Universidade Federal de Ouro Preto. </p>
+      <p>My research interests are focused on cyber security, databases, and distributed systems.
+        Currently, I am working on secure federated learning (FL) protocols with fully homomorphic encryption
+        (FHE). </p>
     </div>
 
     <div class="cv-section">
@@ -41,10 +43,9 @@
         The Vaultree's FFDUE (Fully Functional Data-in-use Encryption) technology provides a
         Software Development Kit (SDK) that enables businesses to efficiently work with
         fully encrypted databases. In that sense, I've been accumulating experiences developing
-        database drivers (JDBC, Python DB API, etc) and different management products to
+        database drivers (JDBC, Python DB API, Rust Clients, etc) and different management products to
         onboard and evolve customers' database schemas. The tools include
-        database migration, database replication, shell REPL environments, and more.
-
+        database migration, database replication, shell REPL and TUI environments and more.
       </p>
       <p>
         ◉ <strong>03/2022 – 12/2022:</strong> Performance Engineer at <a href="https://www.dell.com"
@@ -54,6 +55,23 @@
           Services. For that purpose, I worked developing Python automations using Flask, Dynatrace, Docker, SQL,
           etc. Also, I had to use NeoLoad to run stress tests in order to collect metrics that were automatically
           processed afterwards in order to generate official performance reports.
+      </p>
+      <p>
+        ◉ <strong>10/2019 – 08/2021:</strong> Undergraduate Research Fellow at <a href="https://ufop.br/"
+          target="_blank">Universidade Federal de Ouro Preto<a /><br />
+          As a research fellow, I worked on the areas of Information Retrieval (IR) and Machine Learning (ML). The
+          main contributions of my work were: (i) a research on Learning To Rank (LTR) techniques for multi-label text
+          classification problems, (ii) the development from scratch of an end-to-end textual search engine for
+          educational and research purposes, and (iii) the development of a focused web page crawler based on genre and
+          content.
+      </p>
+      <p>
+        ◉ <strong>03/2019 – 10/2019:</strong> Java Full Stack Engineer at <a href="https://site.gorceix.org.br/"
+          target="_blank">Fundação Gorceix<a /><br />
+          At Fundação Gorceix, I worked as a full-stack Web Developer in a private project of the company.
+          Throughout the development process, I worked with Java 9 using the MVC pattern based on the Spring Framework.
+          I also had experiences with SQL databases (MySQL and SQLServer), front-end implementation using jQuery, Ajax,
+          and Bootstrap.
       </p>
       <!-- Add other experiences as needed -->
     </div>
@@ -70,16 +88,6 @@
         <a href="https://github.com/marcosfpr/ltrs" target="_blank">https://github.com/marcosfpr/ltrs</a>.
       </p>
       <p>
-        ◉ <strong>Twitter Trending Hashtags and Mentions: Analytics</strong><br />
-        In this small project, I’ve developed a real-time streaming processing
-        that consumes the Twitter API through Apache Spark and then plots Web
-        analytics about the most commented Hashtags and Mentions on the
-        platform. For this project, I’ve used Docker, Docker Swarm, Apache
-        Spark Streaming, and Python. The source code can be found here:
-        <a href="https://github.com/marcosfpr/spark_streaming_twitter/"
-          target="_blank">https://github.com/marcosfpr/spark_streaming_twitter/</a>.
-      </p>
-      <p>
         ◉ <strong>ATRI: Experimental Information Retrieval Tool</strong><br />
         The Atri project is an experimental search engine, implemented
         from scratch. In this project, a few classic IR models were implemented
@@ -91,6 +99,25 @@
         ensembles, visualization of effectiveness metrics, and support to
         scientific collections.
         <a href="https://github.com/marcosfpr/atri_ui" target="_blank">https://github.com/marcosfpr/atri_ui</a>.
+      </p>
+      <p>
+        ◉ <strong>SEALy: Microsoft SEAL bindings for Rust and Python. </strong><br />
+        SEALy is a project that aims to create FFI bindings from the famous SEAL library for Rust and Python. The main
+        goal of this project is to provide a simple and fast way to install SEAL for both programming languages.
+        The SEALy bindings are a continuation from the `seal_fhe` crate, with the support for the CKKS scheme and the
+        addition of new features like batch encoders, that allow us to overcome the size barriers of the ciphertext
+        tensors and create AI applications easily with high-dimensional encrypted ciphertext.
+        The project is still in development and the source code can be found here:
+        <a href="https://github.com/marcosfpr/sealy" target="_blank">https://github.com/marcosfpr/sealy</a>.
+      </p>
+      <p>
+        ◉ <strong>FedHE: Flower Federated Learning Strategies with FHE. </strong><br />
+        This project is an implementation of Federated Learning strategies using the Flower framework and the SEALy
+        library. The main goal of this project is to provide a simple and fast way to implement Federated Learning
+        strategies with Fully Homomorphic Encryption.
+        With this project, we can easily train a model in a federated way without sharing plaintext gradients
+        to the 3rd party server. The project is still in development and the source code can be found here:
+        <a href="https://github.com/marcosfpr/fedhe" target="_blank">https://github.com/marcosfpr/fedhe</a>.
       </p>
       <!-- Add other projects as needed -->
     </div>

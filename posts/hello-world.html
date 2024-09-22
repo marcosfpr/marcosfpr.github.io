@@ -1,39 +1,58 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>marcosfpr - hello world</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../style.css" />
-  </head>
 
-  <body>
-    <header>
-      <h1>@marcosfpr</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>marcosfpr - hello world</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</head>
 
-    <nav>
-      <a href="../index.html">home</a>
-      <a href="../posts.html">thoughts</a>
-      <a href="../cv.html">cv</a>
-    </nav>
+<body>
+  <header>
+    <h1>@marcosfpr</h1>
+  </header>
 
-    <div class="post">
-      <h2 class="post-title">hello world!</h2>
-      <p class="post-meta">january 1, 2024</p>
-      <p>just testing the blog page, it works apparently :)</p>
-    </div>
+  <nav>
+    <a href="../index.html">home</a>
+    <a href="../posts.html">thoughts</a>
+    <a href="../cv.html">cv</a>
+  </nav>
 
-    <footer>
-      <p>&copy; 2024 marcosfpr. all rights reserved.</p>
-    </footer>
-  </body>
+  <div class="post">
+    <h2 class="post-title">hello world!</h2>
+    <p class="post-meta">january 1, 2024</p>
+    <p>just testing the blog page, it works apparently :)</p>
+    <h2>Math in TeX notation</h2>
+    When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+    $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+    $$ \begin{array}{rcll}
+    y & = & x^{2}+bx+c\\
+    & = & x^{2}+2\times\dfrac{b}{2}x+c\\
+    & = & \underbrace{x^{2}+2\times\dfrac{b}{2}x+\left(\frac{b}{2}\right)^{2}}-
+    {\left(\dfrac{b}{2}\right)^{2}+c}\\
+    & & \qquad\left(x+{\dfrac{b}{2}}\right)^{2}\\
+    & = & \left(x+\dfrac{b}{2}\right)^{2}-\left(\dfrac{b}{2}\right)^{2}+c
+    & \left|+\left({\dfrac{b}{2}}\right)^{2}-c\right.\\
+    y+\left(\dfrac{b}{2}\right)^{2}-c & = & \left(x+
+    \dfrac{b}{2}\right)^{2} & \left|\strut(\textrm{vertex form})\right.\\
+    y-y_{S} & = & (x-x_{S})^{2}\\
+    S(x_{S};y_{S}) & \,\textrm{or}\,
+    & S\left(-\dfrac{b}{2};\,\left(\dfrac{b}{2}\right)^{2}-c\right)
+    \end{array} $$
+  </div>
+
+  <footer>
+    <p>&copy; 2024 marcosfpr. all rights reserved.</p>
+  </footer>
+</body>
+
 </html>
