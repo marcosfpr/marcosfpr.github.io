@@ -123,3 +123,35 @@ footer {
   font-size: 0.8em;
   font-style: italic;
 }
+
+/* Table Styles */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 2px solid #000;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+th {
+  background-color: #c0c0c0;
+  cursor: pointer;
+}
+
+th.ascending::after {
+  content: " 🔼";
+}
+
+th:not(.ascending)::after {
+  content: " 🔽";
+}
+
+tbody tr:hover {
+  background-color: #f2f2f2;
+}
