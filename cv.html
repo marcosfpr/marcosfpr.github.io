@@ -7,17 +7,19 @@
   <title>marcosfpr - resume</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dark.css" id="theme-style" />
+  <link rel="stylesheet" href="light.css" id="light-style" disabled>
 </head>
 
 <body>
   <header>
-    <h1>@marcosfpr</h1>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="cv.html">CV</a>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="blog.html"><i class="fas fa-rss"></i> Blog</a>
+    <a href="cv.html"><i class="fas fa-file-alt"></i> CV</a>
+    <button id="theme-toggle"><i class="fas fa-adjust"></i>Light/Dark</button>
   </nav>
 
   <div class="cv-content">
@@ -49,7 +51,8 @@
       <h3>About Me</h3>
       <p>Rust software Engineer @ Vaultree.</p>
       <p>Computer Science M.Sc Candidate @ Universidade Federal de Ouro Preto.</p>
-      <p>Currently, my research interests are cybersecurity and general systems engineering.</p>
+      <p>Currently, my research interests are cybersecurity in machine learning systems,
+      federated learning, and cryptography.</p>
     </div>
 
     <div class="cv-section">
@@ -172,7 +175,7 @@
     </div>
 
     <div class="cv-section">
-      <h3>Projects</h3>
+      <h3>Highlighted Projects</h3>
       <p>
         ◉ <strong>SEALy: Microsoft SEAL bindings for Rust and Python. </strong><br />
         SEALy is a project that aims to create FFI bindings from the famous SEAL library for Rust and Python. The main
@@ -184,7 +187,7 @@
         <a href="https://github.com/marcosfpr/sealy" target="_blank">https://github.com/marcosfpr/sealy</a>.
       </p>
       <p>
-        ◉ <strong>FedHE: Flower Federated Learning Strategies with Homomorphic Encryption. </strong><br />
+        ◉ <strong>FedHE: Federated Learning Strategies using Homomorphic Encryption. </strong><br />
         This project is an implementation of Federated Learning strategies using the Flower framework and the SEALy
         library. The main goal of this project is to provide a simple interface to implement Federated Learning
         strategies with Homomorphic Encryption.
@@ -199,7 +202,7 @@
         learning and research purposes. The project source code can be found here:
         <a href="https://github.com/marcosfpr/adarank" target="_blank">https://github.com/marcosfpr/adarank</a>.
       <p>
-        ◉ <strong>ATRI: Experimental Information Retrieval Tool</strong><br />
+        ◉ <strong>ATRI: An Experimental Information Retrieval Tool</strong><br />
         Atri is an experimental search engine, implemented from scratch. 
         In this project, a few classic IR models were implemented
         to calculate similarity between the documents of a collection and a user query: Boolean,
@@ -233,6 +236,8 @@
   <footer>
     <p>&copy; 2024 marcosfpr. all rights reserved.</p>
   </footer>
+
+  <script src="theme.js"></script>
 </body>
 
 </html>

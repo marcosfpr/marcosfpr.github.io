@@ -2,47 +2,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>marcosfpr</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>marcosfpr</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="dark.css" id="theme-style" />
+    <link rel="stylesheet" href="light.css" id="light-style" disabled>
 </head>
 
 <body>
-  <header>
-    <h1>@marcosfpr</h1>
-  </header>
+    <header>
+    </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="cv.html">CV</a>
-  </nav>
+    <nav>
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="blog.html"><i class="fas fa-rss"></i> Blog</a>
+        <a href="cv.html"><i class="fas fa-file-alt"></i> CV</a>
+        <button id="theme-toggle"><i class="fas fa-adjust"></i>Light/Dark</button>
+    </nav>
 
-  <div class="content">
-    <div class="photo">
-      <img src="img/profile.jpeg" alt="Me" />
-    </div>
+    <main class="content">
+        <div class="photo">
+            <img src="img/profile.jpeg" alt="Me" />
+        </div>
 
-    <h2>Welcome aboard</h2>
-    <p>Hello, I'm <a href="https://github.com/marcosfpr">@marcosfpr</a>, a Software Engineer navigating the realms
-      of cybersecurity.</p>
-    <p>Currently pursuing a M.Sc degree in Computer Science, focusing on confidentiality vulnerabilities exploration on
-    federated learning (FL) protocols.</p>
-    <p>This space is a glimpse into my thoughts, experiences, and everything else I'd like to share on the WWW.</p>
+        <h2>Welcome aboard</h2>
+        <p>Hello, I'm <a href="https://github.com/marcosfpr">@marcosfpr</a>, a software engineer navigating
+        the realms of cybersecurity.</p>
+        <p>Currently pursuing a M.Sc in Computer Science with focus on confidentiality attacks on
+        machine learning systems.</p>
+        <p>This space is a glimpse into my thoughts, experiences, and everything else I'd like to share 
+        on the WWW.</p>
+        <div class="links">
+            <h3>Find me on:</h3>
+            <a href="https://github.com/marcosfpr"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/marcosfpr"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:mfprezende@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+    </main>
 
-    <div class="links">
-      <h3>Find me on:</h3>
-      <a href="https://github.com/marcosfpr">GitHub</a>
-      <a href="https://linkedin.com/in/marcosfpr">LinkedIn</a>
-      <a href="mailto:mfprezende@gmail.com">Email</a>
-    </div>
-  </div>
+    <footer>
+        <p>&copy; 2024 marcosfpr. All rights reserved.</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2024 marcosfpr. All rights reserved.</p>
-  </footer>
+    <script src="theme.js"></script>
 </body>
 
 </html>
