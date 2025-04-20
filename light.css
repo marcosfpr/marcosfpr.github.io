@@ -44,6 +44,12 @@ nav a:hover {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+.intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
 .photo {
     width: 200px;
     height: 200px;
@@ -53,6 +59,7 @@ nav a:hover {
     display: inline-block;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .photo img {
@@ -176,3 +183,47 @@ nav button#theme-toggle:hover {
     color: #000;
 }
 
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .welcome {
+        width: 100%;
+    }
+
+    .photo {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* adds spacing between links */
+    }
+
+    nav a {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    button {
+        width: 86%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* collapse to single column */
+    }
+}
