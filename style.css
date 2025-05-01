@@ -1,0 +1,174 @@
+/* --------------------------------------
+   Theme variables & defaults
+-------------------------------------- */
+/* light by default */
+:root {
+  --bg:     #fff;
+  --fg:     #000;
+  --muted:  #666;
+  --link:   #007bff; /* blue links */
+}
+
+/* OS preference fallback */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:     #000;
+    --fg:     #fff;
+    --muted:  #aaa;
+    --link:   #66b2ff; /* lighter blue in dark mode */
+  }
+}
+
+/* force-light */
+html.light {
+  --bg:     #fff;
+  --fg:     #000;
+  --muted:  #666;
+  --link:   #007bff;
+}
+
+/* force-dark */
+html.dark {
+  --bg:     #000;
+  --fg:     #fff;
+  --muted:  #aaa;
+  --link:   #66b2ff;
+}
+
+/* --------------------------------------
+   Base & typography
+-------------------------------------- */
+body {
+  margin:       0;
+  padding:      1rem;
+  background:   var(--bg);
+  color:        var(--fg);
+  text-align:   left;
+  line-height:  1.5;
+}
+
+/* explicit link color */
+a {
+  color:           var(--link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------
+   Layout containers
+-------------------------------------- */
+header,
+nav,
+main,
+footer {
+  max-width: 800px;
+  margin:    0 0 2rem 0;
+}
+
+/* --------------------------------------
+   Header
+-------------------------------------- */
+h1 {
+  margin:      0.5rem 0;
+  font-size:   1.75rem;
+}
+.subtitle {
+  margin:       0 0 1rem 0;
+  font-size:    0.9rem;
+  color:        var(--muted);
+}
+
+/* --------------------------------------
+   Navigation
+-------------------------------------- */
+nav {
+  font-size: 0.95rem;
+}
+nav a {
+  margin:    0 0.3rem;
+}
+nav a:hover {
+  color: var(--link);
+}
+
+/* --------------------------------------
+   Intro section
+-------------------------------------- */
+.intro {
+  display:        flex;
+  align-items:    flex-start;
+  gap:            1rem;
+  margin-bottom:  1rem;
+}
+.avatar {
+  width:         120px;
+  height:        120px;
+  border-radius: 50%;
+  object-fit:    cover;
+  flex-shrink:   0;
+}
+.welcome {
+  flex: 1;
+}
+.welcome h2 {
+  margin-top:  0;
+  font-size:   1.25rem;
+}
+
+/* --------------------------------------
+   Links section
+-------------------------------------- */
+.links h3 {
+  margin-bottom: 0.5rem;
+}
+.links ul {
+  list-style: none;
+  padding:    0;
+  display:    flex;
+  gap:        1rem;
+}
+.links a {
+  font-weight: bold;
+}
+
+/* --------------------------------------
+  Toggle Theme 
+-------------------------------------- */
+
+nav button#theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0.3rem;       /* same horizontal spacing as nav a */
+  font: inherit;          /* match font-family & size */
+  color: var(--link);     /* use the same link color */
+  cursor: pointer;
+  text-decoration: none;  /* remove any default underlines */
+}
+
+nav button#theme-toggle:hover {
+  text-decoration: underline; /* match link hover */
+}
+
+/* --------------------------------------
+   Footer
+-------------------------------------- */
+footer {
+  font-size:    0.85rem;
+  color:        var(--muted);
+}
+
+/* --------------------------------------
+   Responsive adjustments
+-------------------------------------- */
+@media (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+  }
+  header, nav, main, footer {
+    margin-right: 0;
+  }
+}
+
