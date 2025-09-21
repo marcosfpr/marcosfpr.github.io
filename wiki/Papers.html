@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Papers</title>
     <link rel="stylesheet" href="../style.css">
     <script defer src="../theme.js"></script>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
+
 <body>
     <header>
         <h1>marcosfpr</h1>
@@ -30,11 +43,10 @@ I will update this list over time as I discover more papers (or as I find time t
 
 <ul>
 <li>
-<a href="https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf">Reflections on Trusting Trust</a> - Ken Thompson
-  paper on the trustworthiness of compilers and the potential for hidden backdoors.
+<a href="https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf">Reflections on Trusting Trust</a> - Ken Thompson.
 
 <li>
-<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/acrobat-17.pdf">Hints for Computer System Design</a> - Butler Lampson
+<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/acrobat-17.pdf">Hints for Computer System Design</a> - Butler Lampson.
 
 <li>
 <a href="https://curtclifton.net/papers/MoseleyMarks06a.pdf">Out of the Tar Pit</a> - Ben Moseley et al.
@@ -47,4 +59,5 @@ I will update this list over time as I discover more papers (or as I find time t
         &copy; 2024 marcosfpr
     </footer>
 </body>
+
 </html>

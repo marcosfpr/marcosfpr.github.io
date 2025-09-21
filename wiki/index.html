@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>index</title>
     <link rel="stylesheet" href="../style.css">
     <script defer src="../theme.js"></script>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
+
 <body>
     <header>
         <h1>marcosfpr</h1>
@@ -32,6 +45,12 @@ This is my personal wiki. Here, you'll find notes on various topics.
 <li>
 <a href="Vim.html">Vim</a>
 
+<li>
+<a href="Rust.html">Rust</a>
+
+<li>
+<a href="Cybersecurity.html">Cybersecurity</a>
+
 </ul>
 
     </main>
@@ -40,4 +59,5 @@ This is my personal wiki. Here, you'll find notes on various topics.
         &copy; 2024 marcosfpr
     </footer>
 </body>
+
 </html>
