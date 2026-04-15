@@ -12,19 +12,24 @@
 <body>
     <header>
         <h1>marcosfpr</h1> <nav>
-            <a href="index.html">Home</a> |
+            <a href="#about">About</a> /
+            <a href="assets/cv.pdf" download>Resume</a> /
             <button id="theme-toggle" aria-label="Toggle light/dark">Light/Dark</button>
         </nav>
     </header>
 
     <main>
-        <section class="intro">
-            <!-- <img src="img/profile.jpeg" alt="Me" class="avatar"> -->
-            <div class="welcome">
-                <h2>Welcome aboard</h2>
+        <section class="intro section-card" id="about">
+            <div class="welcome comic-note">
+                <h2>About</h2>
                 <p>
                     Hello, I’m <a href="https://github.com/marcosfpr">@marcosfpr</a>, a software engineer with 
                     interests in database systems, distributed systems, and cybersecurity.
+                </p>
+                <p>
+                    I currently work as a Tech Lead at <a href="https://vaultree.com">Vaultree</a>, where I spend a reasonable
+                    amount of time making encrypted data searchable, performant, and usable in the real world, which is
+                    harder than it sounds and exactly as fun as it sounds.
                 </p>
                 <p>
                     I hold a Master of Science in Computer Science from
@@ -34,18 +39,19 @@
             </div>
         </section>
 
-        <p>
-            This space is a glimpse into my thoughts, experiences, and everything else I’d like to share
-            on the WWW.
+        <p class="section-lead">
+            Here are a few things I’ve learned over the years,
         </p>
-
-        <section class="links">
-            <h3>Links:</h3>
+        <ul class="lessons">
+            <li>A clear thought produces a clear statement.</li>
+            <li>Simplicity is the ultimate sophistication.</li>
+        </ul>
+        <section class="links section-card" id="resume">
+            <h2>Links</h2>
             <ul>
                 <li><a href="https://github.com/marcosfpr">GitHub</a></li>
                 <li><a href="https://linkedin.com/in/marcosfpr">LinkedIn</a></li>
                 <li><a href="mailto:mfprezende@gmail.com">Email</a></li>
-                <li><a href="assets/cv.pdf" download>CV</a></li>
             </ul>
         </section>
     </main>
