@@ -45,6 +45,7 @@ body {
   color:        var(--fg);
   text-align:   left;
   line-height:  1.5;
+  font-family: monospace;
 }
 
 /* explicit link color */
